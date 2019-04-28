@@ -33,7 +33,7 @@ async function start () {
     folders.map(async (dir) => {
 
       try {
-        let subPath = await isDir(dir);
+        let subPath = await isDir(dir.name || dir);
         fs.readdir(subPath, (error, fileName) => {
           console.log('SUCCESS in dir,', fileName);
         });
