@@ -4,7 +4,7 @@ let imgPath = '';
 
 let requestData = () => {
   return new Promise((resolve, reject) => {
-    https.get('https://dog.ceo/api/breeds/image/random', (body) => {
+    https.get('https://webdev.alphacamp.io/api/dogs/random', (body) => {
       let data = '';
 
       body.on('data', (chunk) => {
